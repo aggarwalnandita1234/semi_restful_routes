@@ -16,7 +16,12 @@ from system.core.router import routes
     named id the automatically generated url would be '/products/add/<id>'
     The automatically generated routes respond to all of the http verbs (GET, POST, PUT, PATCH, DELETE)
 """
-routes['default_controller'] = 'Welcome'
+routes['default_controller'] = 'Semis'
+routes['POST']['/create']='Semis#create'
+routes['GET']['/show/<id>']='Semis#show'
+routes['GET']['/edit/<id>']='Semis#edit'
+routes['POST']['/update']='Semis#update'
+routes['GET']['/destroy/<id>']='Semis#destroy'
 """
     You can add routes and specify their handlers as follows:
 

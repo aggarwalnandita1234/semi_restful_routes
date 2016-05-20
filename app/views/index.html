@@ -3,6 +3,54 @@
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
   </head>
   <body>
-    The best place to start is the "WelcomeController.py" file in app/controllers.
+    <h2>Prodcuts</h2>
+    This page will have all the products displayed with 3 actions
+    show/edit/remove
+    also, Add a product button
+
+    
+    	<table style="width:70%">
+  		<tr>
+		    <td>Name</td>
+		    <td>Description</td> 
+		    <td>Price</td>
+	    </tr>
+	    </table>
+	{%for display in display%}
+	    <table style="width:70%">
+	    <tr>
+		    <td>{{display['id_pr']}}</td>
+		    <td>{{display['name']}}</td>
+		    <td>{{display['description']}}</td> 
+		    <td>{{display['price']}}</td>
+		    <td><form action='/show/{{display['id_pr']}}' method='GET'>
+		    	<input type='hidden' name='id' value={{display['id_pr']}}>
+		    	<input type='submit' value='Show'>
+	    	</form> 
+	    	<form action='/edit/{{display['id_pr']}}' method='GET'>
+		    	<input type='submit' value='Edit'>
+	    	</form>
+	    	<form action='/destroy/{{display['id_pr']}}' method='GET'>
+		    	<input type='submit' value='Remove'>
+		    </form>
+	    </tr>
+
+	    </table>
+    {%endfor%}
+    {{display}}
+    <a href="/static/add.html">Add a Product</a>
+
+    <!-- <table style="width:100%">
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table> -->
   </body>
 </html>

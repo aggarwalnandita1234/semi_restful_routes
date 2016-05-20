@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Add a product</title>
+<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+	<h2>Add a product</h2>
+	This page will add a product and also go back to index
+
+	<form action='/create', method='post'>
+		Name:<input type='text' name='name'>
+		Description:<input type='text' name='description'>
+		Price: <input type='text' name='price'>
+		<input type='submit' value='Create'>
+	</form>
+	<a href='/index.html'>Go Back</a>
+</body>
+</html>
