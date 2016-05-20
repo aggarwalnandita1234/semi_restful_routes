@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  <form action='/update' method='post'>
+  	<input type='text' name='pr_id' value='{{edit_product['id_pr']}}'>
+	<input type='text' name='name' value='{{edit_product['name']}}'>
+	<input type='text' name='description' value='{{edit_product['description']}}'>
+	<input type='text' name='price' value='{{edit_product['price']}}'>
+	<input type='submit' value='Update'>
+	<a href='/'>Back</a>
+	<a href='/show/{{edit_product['id_pr']}}' method='post'>Show</a>
+  </form>
+  	
+  </body>
+  </html>

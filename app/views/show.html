@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+ 	Product_id:{{show_product['id_pr']}}<br>
+  	Product:{{show_product['name']}}<br>
+  	Description:{{show_product['description']}}<br>
+  	<form action='/edit/{{show_product['id_pr']}}' method='GET'>
+  		<input type='submit' value='Edit'>
+  	</form>
+  	<a href='/'>Go Back</a>
+  </body>
+  </html>
